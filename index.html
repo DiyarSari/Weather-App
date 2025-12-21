@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icon.png">
+    <title>Weather App</title>
+</head>
+  <body>
+    <header class =  "topbar">
+      <div class = "Site">
+        <div class = "logo">☁️</div>
+      <div>
+        <div class = "SiteTitle">Hava Durumu Türkiye</div>
+        <div class = "SiteSubtitle">Open Weather verileri ile Hazırlanmıştır.</div>
+      </div>   
+    </div>
+    <form id="searchForm" class="search">
+      <input id ="searchInput" type="text" placeholder="Şehir ara (örn: İstanbul)" autocomplete="off">
+      <button type="submit">Ara</button>
+    </form>
+    </header>
+
+    <main class="container">
+      <section class ="section">
+        <h2 class="sectionTitle">Popüler Şehirler</h2>
+        <div id="popularButtons" class="tags"></div>
+        <p class ="helpText">Butona Tıkla veya Yukarıdan ara : 5 Günlük Tahmini gör.</p>
+      </section>
+      
+      <section class ="section">
+        <div class="rowBetween">
+          <h2 class="sectionTitle">Popüler İllerin Hava Durumu</h2>
+          <div class="miniInfo" id="gridInfo">Yükleniyor...</div>
+        </div>
+        <div id="provinceGrid" class="grid"></div>
+        <div class="center">
+          <button id ="loadMore" class="loadMore" type="button">Daha Fazla Şehir Yükle</button>
+        </div>
+      </section>
+
+      <section id="details" class="section details hidden">
+        <div class="rowBetween">
+          <h2 class="sectionTitle" id="detailsTitle">Detay</h2>
+          <button id="closeDetails" class="iconButton" type="button">X</button>
+        </div>
+
+        <div id="currentBox" class="currentBox"></div>
+         <h3 class="subTitle">5 Günlük Tahmin</h3>
+         <div id="forecast5Box" class="forecast"></div>
+      </section>
+
+        <script src="app.js"></script>
+    </main>
+  </body>
+
+</html>
