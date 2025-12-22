@@ -18,7 +18,7 @@ const Provinces = [
 let i = 0;
 let Batch = 12;
 
-if (window.innerWidth <= 700) {
+if (window.innerWidth < 701) {
   Batch = 6;
 }
 
@@ -26,16 +26,16 @@ if (window.innerWidth <= 700) {
 const form = document.querySelector("#searchForm");
 const input = document.querySelector("#searchInput");
 const popularButtons = document.querySelector("#popularButtons");
-
 const grid = document.querySelector("#provinceGrid");
 const info = document.querySelector("#gridInfo");
 const moreButton = document.querySelector("#loadMore");
-
 const details = document.querySelector("#details");
 const dTitle = document.querySelector("#detailsTitle");
 const closeButton = document.querySelector("#closeDetails");
 const nowBox = document.querySelector("#currentBox");
 const fBox = document.querySelector("#forecast5Box");
+
+
 
 function icon(iconCode){
   return `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
