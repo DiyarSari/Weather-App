@@ -16,7 +16,7 @@ const Provinces = [
 ];
 
 let i = 0;
-let Batch = 10;
+let Batch = 12;
 
 if (window.innerWidth <= 700) {
   Batch = 6;
