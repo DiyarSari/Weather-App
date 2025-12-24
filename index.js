@@ -18,8 +18,8 @@ const Provinces = [
 let i = 0;
 let Batch = 12;
 
-if (window.innerWidth < 701) {
-  Batch = 6;
+if (window.innerWidth <= 700) {
+  Batch = 8;
 }
 
 
@@ -34,7 +34,6 @@ const dTitle = document.querySelector("#detailsTitle");
 const closeButton = document.querySelector("#closeDetails");
 const nowBox = document.querySelector("#currentBox");
 const fBox = document.querySelector("#forecast5Box");
-
 
 
 function icon(iconCode){
