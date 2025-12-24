@@ -118,8 +118,8 @@ function renderNow(name, c){
   `;
 }
 
-function pick5Days(list){
-  if(!Array.isArray(list) || list.length === 0) return [];
+function forecast5Days(list){
+  if(!Array.isArray(list) || list.length=== 0) return [];
 
   const picked = [];
   const seen = new Set();
@@ -155,7 +155,7 @@ function renderForecast5(data){
   fBox.innerHTML = "";
   if(!data?.list) return;
 
-  const items = pick5Days(data.list);
+  const items = forecast5Days(data.list);
 
   items.forEach(x => {
     const date = new Date(x.dt * 1000);
@@ -244,7 +244,9 @@ async function loadMore(){
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const city = input.value.trim();
-  if(city) openCity(city);
+  if(city){ 
+    openCity(city);
+  }
 });
 
 closeButton.onclick = () => details.classList.add("hidden");
