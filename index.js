@@ -136,17 +136,6 @@ function forecast5Days(list){
     if(picked.length === 5) break;
   }
 
-  if(picked.length < 5){
-    for(let idx = 0; idx < list.length && picked.length < 5; idx += 8){
-      const x = list[idx];
-      const dt = new Date(x.dt * 1000);
-      const dayKey = dt.toISOString().slice(0,10);
-      if(seen.has(dayKey)) continue;
-      seen.add(dayKey);
-      picked.push(x);
-    }
-  }
-
   return picked.slice(0,5);
 }
 
