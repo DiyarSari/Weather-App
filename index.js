@@ -117,7 +117,7 @@ function renderNow(name, c){
   `;
 }
 
-function forecast5Days(list){
+function forecast5Days(list){ 
   if(!Array.isArray(list) || list.length=== 0) return [];
 
   const picked = [];
@@ -129,7 +129,7 @@ function forecast5Days(list){
     const hour = dt.getHours();
 
     if(seen.has(dayKey)) continue;
-    if(hour !== 12 && hour !== 15 && hour !== 9) continue;
+    if(hour !== 9 && hour !== 12 && hour !== 15)continue;
 
     seen.add(dayKey);
     picked.push(x);

@@ -281,6 +281,11 @@ body{
   margin: 6px auto 0;
 }
 
+b::first-letter {
+  text-transform: uppercase;
+}
+
+
 @media (max-width: 700px){
   .topbar{
     display:flex;
@@ -334,6 +339,8 @@ body{
     white-space: nowrap;
   }
 }
+
+
 
 @media (min-width: 701px) and (max-width: 1200px){
   .grid{
